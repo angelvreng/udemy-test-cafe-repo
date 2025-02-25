@@ -1,0 +1,28 @@
+{
+	"name": "testcafe-testing",
+	"version": "1.0.0",
+	"description": "Testing practices from the course",
+	"keywords": [
+		"TestCafe",
+		"Testing",
+		"Automation"
+	],
+	"license": "ISC",
+	"author": "",
+	"type": "commonjs",
+	"main": "index.js",
+	"scripts": {
+		"test:chrome": "testcafe chrome ./tests -s takeOnFails=true --disable-page-caching --ignore-certificate-errors --quarantine-mode",
+		"test:chrome:headless": "testcafe chrome:headless ./tests -s takeOnFails=true",
+		"test:chrome:mobile": "testcafe chrome:emulation:device=iphone X ./tests -s takeOnFails=true",
+		"test:safari": "testcafe safari ./tests -s takeOnFails=true --ignore-certificate-errors --quarantine-mode ",
+		"test:firefox": "testcafe firefox ./tests -s takeOnFails=true",
+		"test:DuckDuckGo": "testcafe \"path:/Applications/DuckDuckGo.app/Contents/MacOS/DuckDuckGo\" ./tests -s takeOnFails=true"
+	},
+	"dependencies": {
+		"testcafe": "^3.7.1"
+	},
+	"devDependencies": {
+		"prettier": "^3.5.1"
+	}
+}
